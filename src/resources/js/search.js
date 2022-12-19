@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
         // fetch('/search/' + event.target.value, {
-        fetch('/' + lang_slug + 'search' + '/' + event.target.value + '/', {
+        fetch('/' + lang_slug + 'laravel-search' + '/' + event.target.value + '/', {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json, text-plain, */*",
