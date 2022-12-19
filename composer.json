@@ -1,0 +1,41 @@
+{
+    "name": "trinityrank/search-multitenancy",
+    "description": "Search for your website",
+    "keywords": [
+        "laravel",
+        "nova",
+        "trinityrank",
+        "search"
+    ],
+    "homepage": "https://bitbucket.org/trinityrank/search-multitenancy/",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "TrinityRank DevTeam",
+            "email": "trinitydevbg@gmail.com",
+            "role": "Team"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "meilisearch/meilisearch-php": "0.24.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trinityrank\\Search\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trinityrank\\Search\\SearchServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
