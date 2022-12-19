@@ -7,7 +7,7 @@
         "trinityrank",
         "search"
     ],
-    "homepage": "https://bitbucket.org/trinityrank/search-multitenancy/",
+    "homepage": "https://github.com/trinity-rank/search/",
     "license": "MIT",
     "type": "library",
     "authors": [
