@@ -1,7 +1,7 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/trinityrank/search-multitenancy.svg?style=flat-square)](https://packagist.org/packages/trinityrank/search-multitenancy)
-[![Total Downloads](https://img.shields.io/packagist/dt/trinityrank/search-multitenancy.svg?style=flat-square)](https://packagist.org/packages/trinityrank/search-multitenancy)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/trinityrank/search.svg?style=flat-square)](https://packagist.org/packages/trinityrank/search)
+[![Total Downloads](https://img.shields.io/packagist/dt/trinityrank/search.svg?style=flat-square)](https://packagist.org/packages/trinityrank/search)
 
 This package manage all data for search:
 - import
@@ -9,7 +9,10 @@ This package manage all data for search:
 - delete)
 - retrive data on frontend
 
-This package will work work with multilanguage on your website ONLY if you are using our [trinity-rank/multilanguage](https://github.com/trinity-rank/multilanguage) package 
+We support multilanguage and shortcode ONLY if you are using our packages:
+- [trinity-rank/multilanguage](https://github.com/trinity-rank/multilanguage)
+- [trinity-rank/search](https://github.com/trinity-rank/search)
+
 
 # Installation
 
@@ -17,10 +20,10 @@ This package will work work with multilanguage on your website ONLY if you are u
 
 ### Step 1: Install package
 
-To get started with Laravel Search Multitenancy, use Composer command to add the package to your composer.json project's dependencies:
+To get started with Laravel Search, use Composer command to add the package to your composer.json project's dependencies:
 
 ```shell
-    composer require trinityrank/search-multitenancy
+    composer require trinityrank/search
 ```
 
 
@@ -152,7 +155,7 @@ Put your **host** and secret **key** into this variables
 ```shell
     ...
     .copy(
-        'vendor/trinityrank/search-multitenancy/src/public/js/search.js',
+        'vendor/trinityrank/search/src/public/js/search.js',
         'public/js'
     )
     ...

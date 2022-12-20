@@ -29,7 +29,7 @@ class ScoutUpdateFilters extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->client = new Client(env('MEILISEARCH_HOST'), env('MEILISEARCH_KEY'));
+        $this->client = new Client(config('scout.meilisearch.host'), config('scout.meilisearch.key'));
     }
 
     /**
