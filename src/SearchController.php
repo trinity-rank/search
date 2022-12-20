@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 use MeiliSearch\Client;
 use Trinityrank\TailingSlash\UrlGenerator;
+use Trinityrank\Shortcode\Shortcodes;
 use MeiliSearch\Contracts\IndexesQuery;
 
 class SearchController extends Controller
@@ -165,6 +166,11 @@ class SearchController extends Controller
             $items = self::$config[$index]['model']::whereIn('id', $ids_to_find)->get();
 
             $this->map($items, $index);
+
+            $items->map(function ($item) {
+                $item['title'] = Shortcodes::convert($item['title']);        
+                return $item;
+            });
 
             $items = $items->toArray();
 
