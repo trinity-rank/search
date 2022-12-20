@@ -19,13 +19,17 @@ trait Search
     }
 
 
-    public static function convert($that)
+    public static function convert($item)
     {
         if (class_exists(Shortcodes::class)) {
-            $that->title = Shortcodes::convert($that->title);
+            $item['title'] = Shortcodes::convert($item['title']);
         }
-        $that->publish_at = Carbon::parse($that->publish_at)->timestamp;
+        if(isset($item['publish_at'])) {
+            $item['publish_at'] = Carbon::parse($item['publish_at'])->timestamp;
+        } else {
+            $item['publish_at'] = Carbon::parse($item['created_at'])->timestamp;
+        }
 
-        return $that;
+        return $item;
     }
 }
