@@ -30,7 +30,7 @@ class ScoutDeleteIndex extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->client = new Client(config('scout.meilisearch.host'), config('scout.meilisearch.key'));
+        $this->client = new Client(env('MEILISEARCH_HOST', 'http://localhost:7700'), env('MEILISEARCH_KEY', null));
     }
 
     /**
